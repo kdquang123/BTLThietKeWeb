@@ -7,12 +7,26 @@
    font-size: 30px;
 }
 
-form{
-    margin-top: 200px;
+.form-login{
     height: auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
     padding: 20px 15px;
     border-radius: 5px;
+    animation: slideDown1 0.8s 1 linear;
+    margin-top: 200px;
+}
+
+.form-signUp{
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    padding: 20px 15px;
+    border-radius: 5px;
+    animation: slideDown2 0.8s 1 linear;
+    margin-top: 150px;
+}
+
+.form-hidden{
+   display: none;
 }
 
 .form-group{
@@ -52,4 +66,26 @@ form{
     border:1px solid red;
     background-color: white;
     box-shadow: none;
+}
+
+@keyframes slideDown1{
+    from{
+        margin-top: 100px;
+        opacity: 0.2;
+    }
+    to{
+        margin-top: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown2{
+    from{
+        margin-top: 100px;
+        opacity: 0.2;
+    }
+    to{
+        margin-top: 150px;
+        opacity: 1;
+    }
 }
