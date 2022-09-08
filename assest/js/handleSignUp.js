@@ -2,8 +2,6 @@ const signUp_btn=document.querySelector(".btn-signUp");
 const input1 =signUp_btn.parentElement.querySelectorAll(".form-input")
 var checkform;
 
-console.log(signUp_btn);
-console.log(input1[3]);
 input1[3].onblur=()=>{
     if(input1[3].value!=="" && input1[3].value!==input1[2].value){
         input1[3].classList.add("warn-input");
