@@ -1,5 +1,5 @@
 const signUp_btn=document.querySelector(".btn-signUp");
-const input1 =signUp_btn.parentElement.querySelectorAll(".form-input")
+const input1 =signUp_btn.parentElement.querySelectorAll(".form-input");
 var checkform;
 
 input1[3].onblur=()=>{
@@ -16,7 +16,6 @@ input1[3].onblur=()=>{
 }
 
 signUp_btn.onclick=()=>{
-      console.log('aa');
       input1.forEach((inp)=>{
           if(inp.value==""){
             inp.classList.add("warn-input");
@@ -27,7 +26,32 @@ signUp_btn.onclick=()=>{
           }
       })
 
+
+      
+      var checkUserExist=true;
       if(checkform){
-        console.log("true");
+        var errorText="User already exist!";
+        var users=JSON.parse(localStorage.getItem("users"));
+        users.forEach((user)=>{
+            if(user.userName===input1[1].value){
+                checkUserExist=false;
+            }
+        })
+
+        if(checkUserExist){
+            var newuser={
+                id:users.length,
+                fullName:input1[0].value,
+                userName:input1[1].value,
+                password:input1[2].value,
+            };
+
+            users.push(newuser);
+            localStorage.setItem("users",JSON.stringify(users));
+            location.href="http://localhost:5500/view/successSignUp.html";
+        }else{
+            signUp_btn.parentElement.querySelector(".checkMessage").innerHTML=errorText;
+        }
+        
       }
 }

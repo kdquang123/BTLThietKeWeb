@@ -12,8 +12,20 @@ login_btn.onclick=()=>{
             checkform =true;
           }
       })
-
+      var checkLog=true;
       if(checkform){
-        console.log("true");
+         var users= JSON.parse(localStorage.getItem("users"));
+         var errorText="Wrong password or user name!";
+
+         users.forEach((user)=>{
+              if(user.userName===input2[0].value && user.password===input2[1].value){
+                location.href="http://localhost:5500/view/home.html";
+                checkLog=false;
+              }
+         })
+         if(checkLog){
+            login_btn.parentElement.querySelector('.checkMessage').innerHTML=errorText;
+         }
+         
       }
 }
