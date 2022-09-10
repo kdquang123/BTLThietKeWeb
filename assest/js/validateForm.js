@@ -1,3 +1,5 @@
+//validate form login,sign in
+
 const input=document.querySelectorAll(".form-input");
 const signUp_link=document.querySelector("#sign-up");
 const login_link=document.querySelector("#Login");

@@ -19,6 +19,7 @@ login_btn.onclick=()=>{
 
          users.forEach((user)=>{
               if(user.userName===input2[0].value && user.password===input2[1].value){
+                localStorage.setItem("key",JSON.stringify(user));
                 location.href="http://localhost:5500/view/home.html";
                 checkLog=false;
               }

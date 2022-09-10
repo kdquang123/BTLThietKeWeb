@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../assest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assest/libraries/bootstrap.min.css">
     <link rel="stylesheet" href="../assest/css/login.css">
 </head>
 <body>
@@ -57,9 +57,14 @@
         </div>
         
     </div>
+    <script>
+       if(localStorage.getItem("key")){
+        location.href="http://localhost:5500/view/home.html";
+       }
+    </script>
     <script type="module" src="../assest/js/validateForm.js"></script>
     <script type="module" src="../assest/js/handleLogin.js"></script>
     <script type="module" src="../assest/js/handleSignUp.js"></script>
-    <script src="../assest/js/bootstrap.min.js"></script>
+    <script src="../assest/libraries/bootstrap.min.js"></script>
 </body>
 </html>
