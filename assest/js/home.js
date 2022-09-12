@@ -1,5 +1,7 @@
 $(document).ready(function(){
-   console.log(JSON.parse(localStorage.getItem("key")));
+
+   var checkSideBar=true;
+   var checkSideBar2=false;
    $(".side-bar .user p").html((JSON.parse(localStorage.getItem("key"))).fullName);
 
    $(".side-bar .user").click(function(){
@@ -14,8 +16,37 @@ $(document).ready(function(){
    $("nav ul>li")
 
    $("nav ul>li").click(function(){
-      $(".side-bar").width(100);
+      if(checkSideBar){
+         $(".side-bar").animate({width:'-=140px'},200);
+         $("nav").animate({left:'-=140px'},200);
+         $(".container-fluid").animate({paddingLeft:'-=140px'},200);
+         checkSideBar=false;
+      }else{
+         checkSideBar=true;
+         $(".side-bar").animate({width:'+=140px'},200);
+         $("nav").animate({left:'+=140px'},200);
+         $(".container-fluid").animate({paddingLeft:'+=140px'},200);
+         
+      }
+      
+   })
+
+
+   $(".side-bar").mouseover(function(){
+      if(!checkSideBar){
+         $(".side-bar").animate({width:'+=140px'},200);
+         $('.mask').addClass('mask-action');
+         checkSideBar2=true;
+      }
+      
+   })
+
+   $(".side-bar").mouseout(function(){
+      if(checkSideBar2){
+         $(".side-bar").animate({width:'-=140px'},200);
+         $('.mask').removeClass('mask-action');
+         checkSideBar2=false;
+      }
    })
   
   });
-//document.querySelector(".side-bar .user p").innerHTML=(JSON.parse(localStorage.getItem("key"))).fullName;
