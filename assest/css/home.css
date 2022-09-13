@@ -10,6 +10,67 @@ body{
     font-family: 'Varela Round', sans-serif;
 }
 
+
+@media screen and (max-width: 1200px) {
+    .row div{
+        flex-basis: 40% !important;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .side-bar{
+        margin-left: -230px;
+    }
+
+    .container-fluid{
+        padding-left: 0px !important;
+    }
+
+    nav{
+        left: 0px !important;
+    }
+
+
+    .row div{
+        flex-basis: 45% !important;
+    }
+  }
+
+
+  @media screen and (max-width: 576px) {
+    .side-bar{
+        margin-left: -230px;
+    }
+
+    .container-fluid{
+        padding-left: 0px !important;
+    }
+
+    nav{
+        left: 0px !important;
+    }
+
+
+    .row div{
+        flex-basis: 90% !important;
+    }
+
+    .row .card .card-title{
+        font-size: 22px !important;
+    }
+
+    .row .card i{
+        font-size: 80px !important;
+    }
+  }
+
+
+
+
+
+
+
+
 .side-bar{
     position: fixed;
     left: 0px;
@@ -24,7 +85,7 @@ body{
 
 
 .side-bar header{
-   width: 230px;
+    width: 230px;
     line-height: 62px;
     color:#ccc;
     font-size: 20px;
@@ -159,7 +220,7 @@ nav ul li:hover a{
 .row div{
     height: 150px;
     flex-basis: 22%;
-    
+    margin-bottom: 30px;
 }
 
 .row .card{
@@ -170,14 +231,29 @@ nav ul li:hover a{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+   
+}
+
+.row .card:hover i{
+    font-size: 55px;
 }
 
 .row .card .card-title{
-    width: 100px;
+    flex: 2;
+    padding: 20px 20px 0px 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
 }
 
 .row .card i{
-    width: 50px;
+    transition: font-size 500ms linear;
+    flex: 1;
+    line-height:100px ;
+    font-size: 50px;
+    color: rgba(0,0,0, 0.1);
 }
 
 .row .card-blue{
@@ -209,9 +285,5 @@ nav ul li:hover a{
     background-color: rgba(0,0,0, 0.4);
 }
 
-
-@media screen{
-    
-}
 
 

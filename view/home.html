@@ -18,8 +18,8 @@
         <div class="user"><i class="fa-sharp fa-solid fa-circle-user" style="margin-right:15px"></i><p class="username"></p></div>
         <div class="logout"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Log out</div>
         <ul>
-         <li><a href="">LIST EMPLOYEE</a></li>
-         <li><a href="">ADD EMPLOYEE</a></li>
+         <li><a href="">Danh sách nhân viên</a></li>
+         <li><a href="">Thêm nhân viên</a></li>
         </ul>
     </div>
     <div class="container-fluid">
@@ -27,7 +27,7 @@
             <nav>
                 <ul>
                     <li><a href="#"><i class="fa-sharp fa-solid fa-bars"></i></a></li>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="/view/home.html">HOME</a></li>
                 </ul>
             </nav>
                 <div class="dash-board">
@@ -35,33 +35,33 @@
                         <div >
                             <div class="card card-blue">
                                 <div class="card-title">
-                                      List of employees
+                                      Danh sách nhân viên
                                 </div>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-users"></i>
                             </div>
                         </div>
                         <div >
                             <div class="card card-green">
                                 <div class="card-title">
-                                    Departments manager
+                                    Quản lí phòng ban
                                 </div>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-landmark"></i>
                             </div>
                         </div>
                         <div>
                             <div class="card card-yellow">
                                 <div class="card-title">
-                                    Possitions manager
+                                    Quản lí chức vụ
                                 </div>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-layer-group"></i>
                             </div>
                         </div>
                         <div>
                             <div class="card card-red">
                                 <div class="card-title">
-                                    Possitions manager
+                                    Danh sách nhân viên đã nghỉ việc
                                 </div>
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-user-minus"></i>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
     <div  class="mask" ></div>
     <script>
         if(!localStorage.getItem("key")){
-           location.href="http://localhost:5500/view/login.html";
+           location.href="/view/login.html";
         }
     </script>
     <script src="../assest/libraries/jquery.min.js"></script>
