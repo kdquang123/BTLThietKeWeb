@@ -16,19 +16,23 @@ $(document).ready(function(){
 
    $("nav ul>li").click(function(){
       if(window.innerWidth<=768){
-            $(".side-bar").animate({marginLeft:'+=230px'},200);
+            $(".side-bar").animate({left:'+=280px'},200);
             $('.mask').addClass('mask-action');
       }else{
          if(checkSideBar){
-            $(".side-bar").animate({width:'-=140px'},200);
-            $("nav").animate({left:'-=140px'},200);
-            $(".container-fluid").animate({paddingLeft:'-=140px'},200);
+            $(".side-bar").animate({width:'-=200px'},200);
+            $(".side-bar").addClass('side-bar-min');
+            $(".side-bar-min header").html('HRM');
+            $("nav").animate({left:'-=200px'},200);
+            $(".container-fluid").animate({paddingLeft:'-=200px'},200);
             checkSideBar=false;
          }else{
             checkSideBar=true;
-            $(".side-bar").animate({width:'+=140px'},200);
-            $("nav").animate({left:'+=140px'},200);
-            $(".container-fluid").animate({paddingLeft:'+=140px'},200);
+            $(".side-bar").animate({width:'+=200px'},200);
+            $(".side-bar").removeClass('side-bar-min');
+            $(".side-bar header").html('HRM App');
+            $("nav").animate({left:'+=200px'},200);
+            $(".container-fluid").animate({paddingLeft:'+=200px'},200);
             
          }
       }
@@ -38,7 +42,7 @@ $(document).ready(function(){
 
 
    $('.mask').click(function(){
-      $(".side-bar").animate({marginLeft:'-=230px'},200);
+      $(".side-bar").animate({left:'-=280px'},200);
       $('.mask').removeClass('mask-action');
    })
 
@@ -47,7 +51,9 @@ $(document).ready(function(){
    
       if(window.innerWidth>768){ 
       if(!checkSideBar){
-         $(".side-bar").animate({width:'+=140px'},200);
+         $(".side-bar").animate({width:'+=200px'},200);
+         $(".side-bar").removeClass('side-bar-min');
+         $(".side-bar header").html('HRM App');
          $('.mask').addClass('mask-action');
          checkSideBar2=true;
       }
@@ -56,10 +62,13 @@ $(document).ready(function(){
    ,function(){
       if(checkSideBar2)
      {
-      $(".side-bar").animate({width:'-=140px'},200);
+      $(".side-bar").animate({width:'-=200px'},200);
+      $(".side-bar").addClass('side-bar-min');
+      $(".side-bar-min header").html('HRM');
       $('.mask').removeClass('mask-action');
       checkSideBar2=false;
      }
    })
    
   });
+
