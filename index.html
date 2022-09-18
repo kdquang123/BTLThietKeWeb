@@ -9,7 +9,7 @@
 <body>    
     <script>
         if(!localStorage.getItem("users")){
-             localStorage.setItem(JSON.stringify([]));
+             localStorage.setItem("users",JSON.stringify([]));
         }
         location.href="/view/login.html";
     </script>
