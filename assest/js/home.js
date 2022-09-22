@@ -69,6 +69,23 @@ $(document).ready(function(){
       checkSideBar2=false;
      }
    })
+
+
+   $('.card-blue').click(function(){
+      
+   })
+
+   $('.card-green').click(function(){
+      location.href="/view/showDepartment.html";
+   })
+
+   $('.card-yellow').click(function(){
+      location.href="/view/listOfPositions.html";
+   })
+
+   $('.card-red').click(function(){
+      
+   })
    
   });
 

@@ -1,0 +1,22 @@
+.side-bar ul li:nth-child(4){
+    background-color: #007bff;
+}
+
+.side-bar ul li:nth-child(4) a{
+    color: #fff;
+}
+
+table{
+ display: block;
+}
+
+table thead{
+    display: block;
+}
+
+
+table tbody{
+    display: block;
+    overflow: auto;
+    height: 500px;
+}
