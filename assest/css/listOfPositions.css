@@ -1,3 +1,28 @@
+.loading{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 7px solid rgba(0, 0, 0, 0.2);
+   border-top: 7px solid blue;
+   margin-top: 20%;
+   margin-left:auto ;
+   margin-right: auto;
+   animation: xoay 2s infinite linear;
+   justify-self:center;
+}
+
+
+@keyframes xoay{
+
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
 .side-bar ul li:nth-child(4){
     background-color: #007bff;
 }
@@ -6,17 +31,20 @@
     color: #fff;
 }
 
-table{
- display: block;
+body{
+    height: 100%;
 }
 
-table thead{
-    display: block;
+.main{
+    height: 100%;
 }
+
+.container-fluid{
+    height: 100%;
+}
+
 
 
 table tbody{
-    display: block;
-    overflow: auto;
-    height: 500px;
+    background-color: #fff;
 }

@@ -263,3 +263,10 @@ nav ul li:hover a{
     }
     
   }
+
+
+@media screen and (max-width: 300px) {
+     nav{
+        width: 300px;
+     }
+}

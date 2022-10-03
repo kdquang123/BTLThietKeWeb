@@ -14,7 +14,7 @@ $(document).ready(function(){
     location.href="/view/login.html";
    })
 
-   $("nav ul>li").click(function(){
+   $("nav ul li:nth-child(1)").click(function(){
       if(window.innerWidth<=768){
             $(".side-bar").animate({left:'+=280px'},200);
             $('.mask').addClass('mask-action');
@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 
    $('.card-blue').click(function(){
-      
+      location.href='/view/showEmployees.html';
    })
 
    $('.card-green').click(function(){
