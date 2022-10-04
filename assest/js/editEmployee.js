@@ -79,8 +79,8 @@ function validateAndSubmit(){
          avatar:urlImg
       };
 
-      fetch('https://632b32b6713d41bc8e83354a.mockapi.io/api/employees', {
-         method: 'POST',
+      fetch(`https://632b32b6713d41bc8e83354a.mockapi.io/api/employees/${formGroup[8].querySelector('input').value}`, {
+         method: 'PUT',
          headers: {
            'Content-Type': 'application/json',
          },
@@ -89,7 +89,7 @@ function validateAndSubmit(){
          .then((response) => response.json())
          .then((data) => {
            console.log('Success:', data);
-           alert('Thêm thành công');
+           alert('Sửa thành công');
          })
          .catch((error) => {
            console.error('Error:', error);
