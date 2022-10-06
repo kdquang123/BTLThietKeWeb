@@ -97,3 +97,11 @@
 
     
   }
+
+
+  @media screen and (max-width: 350px) {
+    .row .card{
+        width: 320px;
+    }
+    
+  }

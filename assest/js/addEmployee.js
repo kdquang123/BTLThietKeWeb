@@ -65,7 +65,7 @@ function validateAndSubmit(){
      if(checkValidate){
       var urlImg=formGroup[7].querySelector('input').value;
         if(!UrlExists(urlImg)){
-            urlImg='../img/placehoder.png';
+            urlImg='../assest/img/placeholder.png';
         }
       const data={
          name:formGroup[0].querySelector('input').value,

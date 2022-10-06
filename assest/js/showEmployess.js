@@ -165,7 +165,7 @@ function editEmployee(id){
                       <div class="form-group">
                         <label for="position">Chức vụ</label>
                         <select class="form-control"  id="position">
-                          <option value="">${employee.position}</option>
+                          <option>${employee.position}</option>
                         </select>
                       </div>
 
@@ -188,7 +188,7 @@ function editEmployee(id){
                           <span class="errorMessage"></span>
                       </div>
                       
-                      <input type="submit" class="btn btn-primary" value="Thêm">
+                      <input type="submit" class="btn btn-primary" value="Sửa">
                     </form>
               </div>
               <div class="col-0 col-sm-1 col-md-1 col-lg-3"></div> `

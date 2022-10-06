@@ -65,7 +65,7 @@ function validateAndSubmit(){
      if(checkValidate){
       var urlImg=formGroup[7].querySelector('input').value;
         if(!UrlExists(urlImg)){
-            urlImg='../img/placehoder.png';
+            urlImg='../assest/img/placeholder.png';
         }
       const data={
          name:formGroup[0].querySelector('input').value,
@@ -90,6 +90,7 @@ function validateAndSubmit(){
          .then((data) => {
            console.log('Success:', data);
            alert('Sửa thành công');
+           location.href="/view/showEmployees.html";
          })
          .catch((error) => {
            console.error('Error:', error);
