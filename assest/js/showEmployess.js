@@ -7,8 +7,10 @@ function getEmPloyess(){
          return response.json();
     })
     .then(function(data){
+           var count=0;
            main.innerHTML=(data.map((employee)=>{
             if(employee.unactive==false){
+                count++;
                 return `<div class="card">
                   <img class="card-img-top" src="${employee.avatar}" alt="">
                   <div class="card-body">
@@ -19,7 +21,11 @@ function getEmPloyess(){
                  </div> `
             }
            })).join('');
-           document.querySelector('.container-fluid').style.height='auto';
+           if(count>=6){
+            document.querySelector('.container-fluid').style.height='auto';
+           }else if(count==0){
+            main.innerHTML='<p class="noEmployeesLog">Không có nhân viên nào!!!<p>';
+           }
     })
 }
 
@@ -68,7 +74,7 @@ function showDetail(id){
            })).join('')+`<div class="col-0 col-sm-0 col-md-0 col-lg-2"></div>
            </div>`;
 
-           document.querySelector('.container-fluid').style.height='1100px';
+           document.querySelector('.container-fluid').style.height='900px';
            
            
     })

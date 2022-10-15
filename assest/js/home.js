@@ -84,7 +84,7 @@ $(document).ready(function(){
    })
 
    $('.card-red').click(function(){
-      
+      location.href="/view/employeesDeleted.html";
    })
    
   });

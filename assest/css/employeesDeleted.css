@@ -116,6 +116,10 @@ body{
     animation: slideDown 300ms linear 1;
 }
 
+.employeesDeletedLog{
+    font-size: 25px;
+}
+
 @keyframes slideDown{
     from{
        opacity: 0;

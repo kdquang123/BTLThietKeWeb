@@ -64,9 +64,6 @@ function validateAndSubmit(){
 
      if(checkValidate){
       var urlImg=formGroup[7].querySelector('input').value;
-        if(!UrlExists(urlImg)){
-            urlImg='../assest/img/placeholder.png';
-        }
       const data={
          name:formGroup[0].querySelector('input').value,
          age:formGroup[1].querySelector('div:nth-child(1) input').value,
@@ -133,13 +130,6 @@ function validateAndSubmit(){
    
 }
 
-function UrlExists(url)
-{
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status!=404;
-}
 
 
 validateAndSubmit();

@@ -7,7 +7,7 @@ function getEmPloyeesDeleted(){
          return response.json();
     })
     .then(function(data){
-           var count=0;
+          var count=0;
            main.innerHTML=(data.map((employee)=>{
             if(employee.unactive==true){
                 count++;
@@ -24,6 +24,8 @@ function getEmPloyeesDeleted(){
            })).join('');
            if(count>=6){
               document.querySelector('.container-fluid').style.height='auto';
+           }else if(count==0){
+            main.innerHTML='<p class="employeesDeletedLog">Không có nhân viên nào nghỉ việc!!!<p>';
            }
     })
 }

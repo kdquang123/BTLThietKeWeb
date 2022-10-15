@@ -312,6 +312,10 @@ form .form-group .errorMessage{
     border: 1px solid red;
 }
 
+.noEmployeesLog{
+    font-size: 25px;
+}
+
 
 
 @media screen and (max-width:600px) {
