@@ -134,13 +134,13 @@ function validateAndSubmit(){
    
 }
 
-/*function UrlExists(url)
+function UrlExists(url)
 {
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
     return http.status!=404;
-}*/
+}
 
 
 validateAndSubmit();
