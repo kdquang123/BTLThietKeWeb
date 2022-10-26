@@ -5,10 +5,10 @@ var checkform;
 input1[3].onblur=()=>{
     if(input1[3].value!=="" && input1[3].value!==input1[2].value){
         input1[3].classList.add("warn-input");
-        input1[3].parentElement.children[1].innerHTML="Repeat password!";
+        input1[3].parentElement.children[1].innerHTML="Nhập lại mật khẩu!";
     }else if(input1[3].value ==""){
         input1[3].classList.add("warn-input");
-        input1[3].parentElement.children[1].innerHTML="The field must be filled out!";
+        input1[3].parentElement.children[1].innerHTML="Bạn cần điền đầy đủ!";
     }else if(input1[3].value!=="" && input1[3].value===input1[2].value){
         input1[3].classList.remove("warn-input");
         input1[3].parentElement.children[1].innerHTML="";
@@ -19,7 +19,7 @@ signUp_btn.onclick=()=>{
       input1.forEach((inp)=>{
           if(inp.value==""){
             inp.classList.add("warn-input");
-            inp.parentElement.children[1].innerHTML="This field must be filled out!";
+            inp.parentElement.children[1].innerHTML="Bạn cần điền đầy đủ!";
             checkform =false;
           }else{
             checkform =true;
@@ -30,7 +30,7 @@ signUp_btn.onclick=()=>{
       
       var checkUserExist=true;
       if(checkform){
-        var errorText="User already exist!";
+        var errorText="Người dùng đã tồn tại!";
         var users=JSON.parse(localStorage.getItem("users"));
         users.forEach((user)=>{
             if(user.userName===input1[1].value){

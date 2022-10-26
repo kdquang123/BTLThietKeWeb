@@ -11,7 +11,7 @@ input.forEach(inp => {
     inp.onblur=()=>{
         if(inp.value==""){
             inp.classList.add("warn-input");
-            inp.parentElement.children[1].innerHTML="This field must be filled out!";
+            inp.parentElement.children[1].innerHTML="Bạn cần nhập đầy đủ!";
         }else{
             inp.classList.remove("warn-input");
             inp.parentElement.children[1].innerHTML="";

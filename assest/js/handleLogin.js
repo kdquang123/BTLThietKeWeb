@@ -6,7 +6,7 @@ login_btn.onclick=()=>{
       input2.forEach((inp)=>{
           if(inp.value==""){
             inp.classList.add("warn-input");
-            inp.parentElement.children[1].innerHTML="This field must be filled out!";
+            inp.parentElement.children[1].innerHTML="Bạn cần nhập đầy đủ!";
             checkform =false;
           }else{
             checkform =true;
@@ -15,7 +15,7 @@ login_btn.onclick=()=>{
       var checkLog=true;
       if(checkform){
          var users= JSON.parse(localStorage.getItem("users"));
-         var errorText="Wrong password or user name!";
+         var errorText="Sai mật khẩu hoặc tên đăng nhập!";
          
          users.forEach((user)=>{
               if(user.userName===input2[0].value && user.password===input2[1].value){
