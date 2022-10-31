@@ -52,7 +52,7 @@ function deleteEmployee(id){
   .then(res => res.json())
   .then((data)=>{
       alert('Xóa thành công');
-      location.href='/view/employeesDeleted.html';
+      location.href='./employeesDeleted.html';
   })
 }
 
@@ -72,7 +72,7 @@ function restoreEmployee(id,isActive){
         .then((data) => {
           console.log('Success:', data);
           alert('Khôi phục thành công!');
-          location.href="/view/employeesDeleted.html";
+          location.href="./employeesDeleted.html";
         })
         .catch((error) => {
           console.error('Error:', error);

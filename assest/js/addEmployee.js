@@ -90,7 +90,7 @@ function validateAndSubmit(){
          .then((data) => {
            console.log('Success:', data);
            alert('Thêm thành công');
-           location.href='/view/showEmployees.html';
+           location.href='./showEmployees.html';
          })
          .catch((error) => {
            console.error('Error:', error);

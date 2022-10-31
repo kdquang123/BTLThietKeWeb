@@ -97,7 +97,7 @@ function softDeleteEmployee(id,isActive){
         .then((data) => {
           console.log('Success:', data);
           alert('Xóa thành công!');
-          location.href="/view/showEmployees.html";
+          location.href="./showEmployees.html";
         })
         .catch((error) => {
           console.error('Error:', error);

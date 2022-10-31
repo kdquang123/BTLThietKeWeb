@@ -48,7 +48,7 @@ signUp_btn.onclick=()=>{
 
             users.push(newuser);
             localStorage.setItem("users",JSON.stringify(users));
-            location.href="/view/successSignUp.html";
+            location.href="./successSignUp.html";
         }else{
             signUp_btn.parentElement.querySelector(".checkMessage").innerHTML=errorText;
         }

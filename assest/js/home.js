@@ -11,7 +11,7 @@ $(document).ready(function(){
 
    $(".side-bar .logout").click(function(){
     localStorage.removeItem("key");
-    location.href="/view/login.html";
+    location.href="./login.html";
    })
 
    $("nav ul li:nth-child(1)").click(function(){
@@ -72,19 +72,19 @@ $(document).ready(function(){
 
 
    $('.card-blue').click(function(){
-      location.href='/view/showEmployees.html';
+      location.href='./showEmployees.html';
    })
 
    $('.card-green').click(function(){
-      location.href="/view/showDepartment.html";
+      location.href="./showDepartment.html";
    })
 
    $('.card-yellow').click(function(){
-      location.href="/view/listOfPositions.html";
+      location.href="./listOfPositions.html";
    })
 
    $('.card-red').click(function(){
-      location.href="/view/employeesDeleted.html";
+      location.href="./employeesDeleted.html";
    })
    
   });
